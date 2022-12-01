@@ -1,6 +1,21 @@
+import { MeshProvider } from '@martifylabs/mesh-react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Footer from '../components/Footer';
+import Navbar from '../components/Nav';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <MeshProvider>
+      <header>
+        <Navbar />
+      </header>
+      <Component {...pageProps} />
+      <footer>
+        <Footer />
+      </footer>
+    </MeshProvider>
+  );
 }
+
+export default MyApp;

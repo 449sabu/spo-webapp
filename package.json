@@ -10,9 +10,12 @@
     "format": "next lint --fix --dir src"
   },
   "dependencies": {
+    "@martifylabs/mesh": "^1.2.0-beta.4",
+    "@martifylabs/mesh-react": "^1.1.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "daisyui": "^2.42.1",
     "eslint-config-next": "13.0.5",
     "next": "13.0.5",
     "react": "18.2.0",
@@ -20,6 +23,7 @@
     "typescript": "4.9.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.8",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "autoprefixer": "^10.4.13",
