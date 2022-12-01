@@ -10,6 +10,7 @@
     "format": "next lint --fix --dir src"
   },
   "dependencies": {
+    "@blockfrost/blockfrost-js": "^5.1.0",
     "@martifylabs/mesh": "^1.2.0-beta.4",
     "@martifylabs/mesh-react": "^1.1.1",
     "@types/node": "18.11.9",

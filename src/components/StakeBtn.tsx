@@ -51,13 +51,7 @@ export const MenuItem = ({
   </li>
 );
 
-const TestStakeButton = ({
-  poolId,
-  onCheck,
-}: {
-  poolId: string;
-  onCheck: any;
-}) => {
+const StakeButton = ({ poolId, onCheck }: { poolId: string; onCheck: any }) => {
   const wallets = useWalletList();
   const [hideMenuList, setHideMenuList] = useState(true);
   const { connect, connecting, connected, name } = useWallet();
@@ -112,7 +106,7 @@ const TestStakeButton = ({
   );
 };
 
-export default TestStakeButton;
+export default StakeButton;
 
 const Delegate = ({ poolId, onCheck }: { poolId: string; onCheck: any }) => {
   const tx = useWalletTx();

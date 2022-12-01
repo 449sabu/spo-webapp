@@ -2,7 +2,7 @@ import { KoiosProvider } from '@martifylabs/mesh';
 // import { StakeButton } from '@martifylabs/mesh-react';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import TestStakeButton from '../components/Test';
+import StakeButton from './StakeBtn';
 
 type address = string;
 
@@ -13,7 +13,8 @@ const Navbar: NextPage = () => {
 
   return (
     <>
-      <div className="bg-white fixed w-full">
+      {/* ヘッダーメニューを固定する場合 fixed w-full */}
+      <div className="bg-white ">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <header className="flex justify-between items-center py-4 md:py-8 ">
             {/* <!-- ロゴ --> */}
@@ -62,7 +63,7 @@ const Navbar: NextPage = () => {
                   Stats
                 </a>
               </Link>
-              <Link href="/test" legacyBehavior>
+              <Link href="/contact" legacyBehavior>
                 <a className="text-gray-600 text-lg font-semibold transition duration-100 p-2">
                   Contact
                 </a>
@@ -81,7 +82,7 @@ const Navbar: NextPage = () => {
                   Home
                 </a>
               </Link>
-              <Link href="/test" legacyBehavior>
+              <Link href="/stats" legacyBehavior>
                 <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
                   Stats
                 </a>
@@ -91,16 +92,16 @@ const Navbar: NextPage = () => {
                   Contact
                 </a>
               </Link>
-              <Link href="/test" legacyBehavior>
+              <Link href="/dev" legacyBehavior>
                 <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
-                  Test
+                  Dev
                 </a>
               </Link>
             </nav>
             {/* <!-- 右側の配置アイテム --> */}
             <div className="hidden lg:flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5 -ml-8">
               {/* 委任ボタン */}
-              <TestStakeButton
+              <StakeButton
                 onCheck={(address: address) =>
                   blockchainProvider.fetchAccountInfo(address)
                 }
