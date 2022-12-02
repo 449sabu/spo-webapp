@@ -7,7 +7,9 @@ export const getStaticProps = async () => {
   const API = new BlockFrostAPI({
     projectId: 'mainnetg5YxGssXpYdb2iuXLMFChR222gty2Ubf',
   });
-  const poolsMetaData = await API.poolMetadata(process.env.NEXT_PUBLIC_POOL_ID || '');
+  const poolsMetaData = await API.poolMetadata(
+    process.env.NEXT_PUBLIC_POOL_ID || '',
+  );
   const poolsById = await API.poolsById(process.env.NEXT_PUBLIC_POOL_ID || '');
   const poolsByIdDelegators = await API.poolsByIdDelegators(
     process.env.NEXT_PUBLIC_POOL_ID || '',
