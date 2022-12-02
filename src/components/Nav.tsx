@@ -68,11 +68,6 @@ const Navbar: NextPage = () => {
                   Contact
                 </a>
               </Link>
-              <Link href="/test" legacyBehavior>
-                <a className="text-gray-600 text-lg font-semibold transition duration-100 p-2">
-                  Test
-                </a>
-              </Link>
             </aside>
 
             {/* <!-- デスクトップ用ナビゲーション--> */}
@@ -90,11 +85,6 @@ const Navbar: NextPage = () => {
               <Link href="/contact" legacyBehavior>
                 <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
                   Contact
-                </a>
-              </Link>
-              <Link href="/dev" legacyBehavior>
-                <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
-                  Dev
                 </a>
               </Link>
             </nav>
