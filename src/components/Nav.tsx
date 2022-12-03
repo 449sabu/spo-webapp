@@ -6,7 +6,7 @@ import StakeButton from './StakeBtn';
 
 type address = string;
 
-const Navbar: NextPage = () => {
+const Navbar: NextPage = (MetaData) => {
   const blockchainProvider = new KoiosProvider('api');
   const PoolId = process.env.NEXT_PUBLIC_POOL_ID || '';
   // console.log(`PoolIdは ${PoolId} です`);
@@ -85,6 +85,11 @@ const Navbar: NextPage = () => {
               <Link href="/contact" legacyBehavior>
                 <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
                   Contact
+                </a>
+              </Link>
+              <Link href="/context/blockfrost" legacyBehavior>
+                <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">
+                  Blockfrost
                 </a>
               </Link>
             </nav>

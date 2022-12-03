@@ -1,9 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-// import Feature from '../components/Feature';
+import Feature from '../components/Feature';
 import Hero from '../components/Hero';
+import Footer from 'components/Footer';
 
 const Home: NextPage = () => {
+  const a = 0;
+
   return (
     <>
       <Head>
@@ -13,8 +16,9 @@ const Home: NextPage = () => {
       </Head>
       <main className="bg-gradient-to-r from-green-300 to-purple-400">
         <Hero />
-        {/* <Feature /> */}
+        <Feature />
       </main>
+      {/* <Footer title="a" /> */}
     </>
   );
 };

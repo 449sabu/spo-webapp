@@ -5,15 +5,15 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Nav';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const a = 'フッター';
+
   return (
     <MeshProvider>
       <header>
         <Navbar />
       </header>
       <Component {...pageProps} />
-      <footer>
-        <Footer />
-      </footer>
+      <footer>{/* <Footer title={a} /> */}</footer>
     </MeshProvider>
   );
 }

@@ -1,7 +1,7 @@
 import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
 import type { NextPage, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 // import { MetaData, PoolData, Delegators } from '../types/blockfrost';
 
 export const getStaticProps = async () => {
@@ -35,6 +35,8 @@ const Stats: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   PoolData,
   // Delegators,
 }) => {
+  const MetaDataContext = createContext(MetaData);
+
   function TT(st: string) {
     if (st.length > 12) {
       const num = parseInt(st) / 1000000000000;
